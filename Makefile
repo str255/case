@@ -1,5 +1,5 @@
 FILES	= case.c
 CC	= g++
 CFLAGS	= -g -ansi
-caser:		$(FILES)
+case:		$(FILES)
 		$(CC) $(CFLAGS) $(FILES) -o case
