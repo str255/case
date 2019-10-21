@@ -47,6 +47,17 @@ main(int argc, char **argv)
   srand(seed);
   for (index=0;index<slen;index++){
     ch = string[index];
+#ifdef INVERT
+      if (islower(ch)) string[index] = toupper(ch);
+      if (isupper(ch)) string[index] = tolower(ch);
+#endif
+#ifdef UPPER
+      if (islower(ch)) string[index] = toupper(ch);
+#endif
+#ifdef LOWER
+      if (isupper(ch)) string[index] = tolower(ch);
+#endif
+#ifdef RANDOM
     randome = (double)rand()/(double)RAND_MAX;
     if (randome < 0.5){
       if (isupper(ch))
@@ -54,6 +65,7 @@ main(int argc, char **argv)
       else
 	string[index] = toupper(ch);
     }
+#endif
   }
   printf("%s\n", string);
 }
