@@ -5,7 +5,10 @@
    Output: random mutated upper/lowercase string
    
    Examples: 
-        caser hereitmustbegood --> HErEitmuStBEGood
+        caser 
+        
+        ./caser hereitmustbegood 
+        HErEitmuStBEGood
         output a random case string.
  
         cat README.md   | xargs -I {} ./caseu {}
